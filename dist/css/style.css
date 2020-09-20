@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+#header-home {
+  background: url("../img/sushi-home.jpg") center right/cover;
+  height: 100vh;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden; 
+}
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgb(6, 18, 39);
+  padding: 1.2rem -0.02rem; 
+}
+ 
+#main-nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  padding-left: 30px;
+}
+
+#main-nav ul a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  transition: border-color 0.5s;
+  font-weight: bold; 
+}
+
+#main-nav ul a:hover {
+  border-color: #ff00d4; 
+}
+
+#main-nav ul a.current {
+  border-color: #12c4b2; 
+}
+
+#main-nav ul li {
+  height: 10px;
+  padding: 1.5rem 1.5rem;
+}
+
