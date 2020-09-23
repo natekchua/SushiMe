@@ -140,8 +140,8 @@ section::before {
   background: url("../img/backgrounds/sushi-home (3).jpg") center right/cover;
   background-size: cover;
   opacity: 0.6;
-  animation: home-animated 12s alternate-reverse infinite;
-  animation-delay: 2s;
+  animation: home-animated 15s alternate-reverse infinite;
+  animation-delay: 3s;
 }
 
 @keyframes home-animated {
