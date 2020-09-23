@@ -4,8 +4,11 @@
   font-family: 'Oxygen', sans-serif;
 }
 
+/* ELEMENT STYLING */
+
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,11 +21,15 @@ section {
   width: 100%;
   height: 100vh;
   justify-content: center;
-  background: #000;
+  background: url("../img/backgrounds/bg2.jpg") center right/cover;
+}
+
+p {
+  font-size: 16px;
 }
 
 section:nth-child(odd) {
-  background: url("../img/bg.jpg") center right/cover;
+  background: url("../img/backgrounds/bg.jpg") center right/cover;
   background-size: cover;
 }
 
@@ -30,22 +37,58 @@ section::before {
   color: #262626;
 }
 
+/* UTILITY STYLES */
+
 .flex {
   display: flex;
 }
 
 .flex-middle {
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-#main-nav {
-  justify-content: space-between;
-  overflow: hidden;
-  width: 100%;
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ff00d4;
+  border: #ff00d4 2px solid;
+  border-radius: 4px;
+  padding: 10px 20px;
+  transition: 0.4s linear;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #ff00d4;
+}
+
+.page-btn {
+  margin: 10px;
+}
+
+.container {
+  width: 1250px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.bg-header-footer {
   background: rgb(6, 18, 39);
+}
+
+/* HOME PAGE */
+
+#main-nav {
+  position: fixed;
+  z-index: 10;
+  justify-content: space-between;
+  width: 100%;
   padding: 1.2rem -0.02rem; 
 }
- 
+
 #main-nav ul {
   list-style-type: none;
   padding-right: 30px;
@@ -71,7 +114,7 @@ section::before {
 }
 
 #main-nav ul a.current {
-  border-color: #12c4b2; 
+  border-color: #3afae7; 
 }
 
 #main-nav ul li {
@@ -94,38 +137,52 @@ section::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/sushi-home (2).jpg") center right/cover;
+  background: url("../img/backgrounds/sushi-home (3).jpg") center right/cover;
   background-size: cover;
   opacity: 0.6;
-  animation: home-animated 25s linear infinite;
+  animation: home-animated 12s alternate-reverse infinite;
+  animation-delay: 2s;
 }
 
 @keyframes home-animated {
+  0% {
+    transform: scale(1);
+    background: url("../img/backgrounds/sushi-home.jpg") center right/cover;
+  }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    background: url("../img/backgrounds/sushi-home (2).jpg") center right/cover;
   }
   100% {
     transform: scale(1);
+    background: url("../img/backgrounds/sushi-home (3).jpg") center right/cover;
   }
 }
 
-#learn-more {
-  width: 100%;
-}
-
 .home-content {
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   z-index: 1;
+  animation: fade-in 1.7s;
 }
 
-.home-content h2 {
-  color: #12c4b2;
-  font-size: 3rem;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    top: 0%;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-content h1 {
+  color: #3afae7;
+  font-size: 4rem;
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -135,55 +192,64 @@ section::before {
   margin-bottom: 20px;
 }
 
-.home-content a {
-  display: inline-block;
-  text-decoration: none;
-  color: #ff00d4;
-  border: #ff00d4 2px solid;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  transition: 0.4s linear;
-}
-
-.home-content a:hover {
-  color: #fff;
-  background: #ff00d4;
-}
-
-.container {
-  width: 1250px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0 1.5rem;
-}
-
 .row {
-  display: grid;
-  grid-column-gap: 50px;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .col {
-  width: 400px;
-  height: 400px;
+  height: 100%;
+  width: 1100px;
   border-radius: 8px;
-  padding: 20px 0;
-  position: relative;
-  background: #12c4b2;
-  overflow: hidden;
+  padding: 20px;
+  margin: 30px;
+  background: #18ffecde;
 }
 
-.item-image {
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  display: block;
+.col p {
+  font-size: 26px;
+  text-align: center;
+}
+
+.col img {
+  margin-top: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.65);
+}
+
+.slide-left {
+  animation: slide-from-left 4s;
+}
+
+.slide-right {
+  animation: slide-from-right 4s;
+
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-3000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(3000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 #footer {
   margin-top: auto;
   background: rgb(6, 18, 39);
   color: white;
-  padding: 18px 0;
+  padding: 18px;
 }

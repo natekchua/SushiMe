@@ -10,8 +10,8 @@
   </head>
   <body>
     <header>
-      <nav id="main-nav" class="fixed-header flex">
-        <a href="index.html"><img src="img/logo.png" alt="SushiMe Home Page" id="logo" /></a>
+      <nav id="main-nav" class="bg-header-footer fixed-header flex sticky">
+        <a href="index.html"><img src="img/icons/logo.png" alt="SushiMe Home Page" id="logo" /></a>
         <ul class="flex flex-middle">
           <li><a href="index.html" class="current">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
@@ -21,39 +21,54 @@
       </nav>
     </header>
     <div id='home-page'>
-      <div class="home-content">
-        <h2>WELCOME TO SushiMe</h2>
-        <p>
-          For All Sushi Lovers.
-        </p>
-        <a class="flex flex-middle" href="#learn-more">
-          Learn More
-        </a>
+      <div class="home-content flex flex-middle">
+        <h1>Welcome To SushiMe</h1>
+        <span>
+          <p style="font-size: 28px;">Handcrafted Beauty. For All Sushi Lovers.</p>
+          <a href="#what-sushi" class="btn" >Learn More</a>
+        </span>
       </div>
     </div>
-    <section id="learn-more" class="flex flex-middle">
+    <section id="what-sushi" class="flex flex-middle">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <div class="item-image">
-              <img src="img/items/item1.jpg" alt="Sushi 1" style="width: 100%; max-height: 100%">
-            </div>
-            <h2>What is Sushi?</h2>
-            <p>a Japanese dish consisting of small balls or rolls of vinegar-flavored cold cooked rice served with a garnish of raw fish, vegetables, or egg.</p>
+          <div class="col slide-left">
+            <h1 style="font-size: 40px;">So... What is Sushi?</h1>
           </div>
-          <div class="col">
-            
-          </div>
-          <div class="col">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatum, asperiores unde et harum nulla dignissimos recusandae modi voluptates maiores!
+        <div class="row">
+          <div class="col slide-right">
+            <p>Sushi is a Japanese dish which consists of small balls or rolls of vinegar-flavored cold cooked rice served with a garnish of raw fish, vegetables, or egg.</p>
+            <img src="img/items/item1.jpg" alt="Sushi 1" width="600" height="300">
           </div>
         </div>
       </div>
+      <div class="flex flex-middle">
+        <a href="#home-page" class="btn page-btn" >Previous Page</a>
+        <a href="#why-sushi" class="btn page-btn" >Next Page</a>
+      </div>
     </section>
-   <section id="#learn-more"></section>
+   <section id="why-sushi" class="flex flex-middle">
+     <div class="container">
+        <div class="row">
+          <div class="col slide-left">
+            <h1 style="font-size: 40px;">Well, Why Eat Sushi?</h1>
+          </div>
+        <div class="row">
+          <div class="col slide-right">
+            <p>Sushi is a very healthy meal! It's a good source of heart healthy omega-3 fatty acids thanks to the fish it's made with. Sushi is also low in calories – there's no added fat.
+              The most common type is nigiri sushi – fingers of sticky rice topped with a small filet of fish or seafood.</p>
+            <img src="img/items/item2.jpg" alt="Sushi 1" width="600" height="310">
+          </div>
+        </div>
+     </div>
+     <div class="flex flex-middle">
+      <a href="#what-sushi" class="btn page-btn" >Previous Page</a>
+      <a href="#home-page" class="btn page-btn" >Back to Top</a>
+     </div>    
+   </section>
     <div id="footer">
-      <div class="container">
-        Copyright 2020
+      <div class="bg-header-footer flex flex-middle">
+        Copyright 2020 - SENG 513 Assignment 1 Nathan Chua (UCID: 30020566)
       </div>
     </div>
   </body>
