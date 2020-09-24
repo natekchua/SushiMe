@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Oxygen', sans-serif;
+  box-sizing: border-box;
 }
 
 /* ELEMENT STYLING */
 
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -25,7 +26,14 @@ section {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
+}
+
+h5 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 8px;
 }
 
 section:nth-child(odd) {
@@ -49,6 +57,18 @@ section::before {
   text-align: center;
 }
 
+.flex-vertical {
+  flex-direction: column;
+}
+
+.space-btwn {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -66,11 +86,12 @@ section::before {
 }
 
 .page-btn {
-  margin: 10px;
+  margin: 15px;
 }
 
 .container {
-  width: 1250px;
+  height: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -84,7 +105,6 @@ section::before {
 #main-nav {
   position: fixed;
   z-index: 10;
-  justify-content: space-between;
   width: 100%;
   padding: 1.2rem -0.02rem; 
 }
@@ -95,7 +115,7 @@ section::before {
 }
 
 #logo {
-  width: 100px;
+  width: 130px;
   height: 100px;
   padding-left: 30px;
 }
@@ -103,10 +123,11 @@ section::before {
 #main-nav ul a {
   text-decoration: none;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: bold; 
   border-bottom: 3px transparent solid;
   transition: border-color 0.5s;
-  font-weight: bold; 
 }
 
 #main-nav ul a:hover {
@@ -252,4 +273,123 @@ section::before {
   background: rgb(6, 18, 39);
   color: white;
   padding: 18px;
+}
+
+/* GALLERY PAGE */
+
+.page-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#gallery-page-1 {
+  background: url("../img/backgrounds/gallery-bg.jpg") center right/cover;
+}
+
+#gallery-page-2 {
+  background: url("../img/backgrounds/gallery-bg-flipped.jpg") center left/cover;
+}
+
+.gallery-content {
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.gallery-content h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+/* SUSHI CARD */
+
+.sushi-card-transition {
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.sushi-card {
+  height: 28em;
+  width: 21em;
+  flex-direction: column;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 6px #929292, 4px 4px 24px #9b9b9b;
+}
+
+.sushi-image {
+  height: 12em;
+  width: 100%;
+  padding: 1em 2em;
+  position: absolute;
+  top: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s ease-in-out;
+}
+
+.sushi-more {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sushi-card:hover .sushi-image {
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  filter: grayscale(100%) blur(10px);
+  z-index: -1;
+}
+
+.sushi-card:hover .sushi-more p {
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+  opacity: 1;
+  color: white;
+
+}
+
+.sushi-description {
+  background-color:  #FAFAFC;
+  height: 16em;
+  position: absolute;
+  bottom: 0;
+  padding: 0.8em;
+}
+
+.sushi-card:hover .sushi-description {
+  height:0em;
+  padding:0px 1em;
+}
+
+#card-1 {
+  background: url("../img/cards/card1.jpg") center left/cover;
+}
+
+#card-2 {
+  background: url("../img/cards/card2.jpg") center left/cover;
+}
+
+#card-3 {
+  background: url("../img/cards/card3.jpg") center left/cover;
+
+}
+#card-4 {
+  background: url("../img/cards/card4.jpg") center left/cover;
+}
+
+#card-5 {
+  background: url("../img/cards/card5.jpg") center left/cover;
+}
+
+#card-6 {
+  background: url("../img/cards/card6.jpg") center left/cover;
 }
