@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -96,6 +95,14 @@ section::before {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+
+.page-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 
 .bg-header-footer {
   background: rgb(6, 18, 39);
@@ -202,6 +209,7 @@ section::before {
     opacity: 1;
   }
 }
+
 .home-content h1 {
   color: #3afae7;
   font-size: 4rem;
@@ -277,13 +285,6 @@ section::before {
 }
 
 /* GALLERY PAGE */
-
-.page-container {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
 
 #gallery-page-1 {
   background: url("../img/backgrounds/gallery-bg.jpg") center right/cover;
@@ -408,7 +409,7 @@ section::before {
   padding: 24px;
   font-size: 30px;
   font-weight: 700;
-  box-shadow: 3px 4px 5px #000;
+  box-shadow: 15px 15px 8px 5px rgb(0, 0, 0);
   text-shadow: 2px 3px 15px #00000028;
 }
 
@@ -510,15 +511,18 @@ td > p {
   background: #4495ff;
   padding: 30px;
   text-align: center;
-  font-size: 36px;
-  font-weight: 700;
   border-radius: 12px;
+}
+
+.blog-header h1 {
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .blog-grid {
   position: relative;
   display: grid;
-  top: 6%;
+  top: 7%;
   grid-row-gap: 15px;
   grid-column-gap: 15px;
   padding: 50px;
@@ -528,6 +532,7 @@ td > p {
     "blog-header blog-header blog-header"
     "blog-sidebar-1 blog-content-1 blog-content-1"
     "blog-content-2 blog-content-2 blog-sidebar-2";
+  animation: fade-in 1.5s;
 }
 
 .blog-grid > * {
@@ -562,6 +567,14 @@ td > p {
   grid-area: blog-content-2;
   background: #abe4ff9d;
   border-radius: 50px 0 0 50px;
+}
+
+.blog-content-1 p, .blog-content-2 p {
+  font-size: 18px;
+}
+
+.blog-sidebar-1 p, .blog-sidebar-2 p {
+  font-size: 16px;
 }
 
 #blog-image-1 {
@@ -600,6 +613,14 @@ td > p {
   color: #ff00d4;
 }
 
-.blog-grid ul a:visited, a:hover, a:active {
+.blog-grid ul a:visited, a:active {
   color: inherit;
+}
+
+.blog-next {
+  text-decoration: none;
+  background: #ff00d4;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
 }
