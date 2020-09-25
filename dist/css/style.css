@@ -77,7 +77,7 @@ section::before {
   border: #ff00d4 2px solid;
   border-radius: 4px;
   padding: 10px 20px;
-  transition: 0.4s linear;
+  transition: 0.3s linear;
 }
 
 .btn:hover {
@@ -117,7 +117,7 @@ section::before {
 #logo {
   width: 130px;
   height: 100px;
-  padding-left: 30px;
+  padding: 7px 0 0 30px;
 }
 
 #main-nav ul a {
@@ -271,7 +271,7 @@ section::before {
 #footer {
   margin-top: auto;
   background: rgb(6, 18, 39);
-  color: white;
+  color: #ffffff;
   padding: 18px;
 }
 
@@ -353,7 +353,7 @@ section::before {
   transition: 0.5s ease-in-out;
   z-index: 10;
   opacity: 1;
-  color: white;
+  color: #ffffff;
 
 }
 
@@ -392,4 +392,102 @@ section::before {
 
 #card-6 {
   background: url("../img/cards/card6.jpg") center left/cover;
+}
+
+/* FAVORITES PAGE */
+
+#favorites-page-1 {
+  background: url("../img/backgrounds/bg.jpg") center right/cover;
+}
+
+.favorites-header {
+  grid-area: header;
+  background-color: ivory;
+  border-radius: 75px;
+  padding: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: 3px 4px 5px #000;
+  text-shadow: 2px 3px 15px #00000028;
+}
+
+.favorites-content {
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  width: 100%;
+  animation: fade-in 1.5s;
+}
+
+.favorites-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "header  header  header"
+    "sidebar table table";
+}
+
+.favorites-sidebar {
+  grid-area: sidebar;
+}
+
+#fave-side-image {
+  background: url("../img/backgrounds/faves.jpg") center left/cover;
+  height: 100%;
+  border-radius: 75px 0 0 500px;
+  border: 3px solid #ffffffe1;
+}
+
+.favorites-table {
+  grid-area: table;
+  position: relative;
+  padding: 3px;
+  background-color: #ffffffe1;
+}
+
+.table-property {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  color:#ffffff;
+  background:#1f232b;
+  border-bottom:4px solid #00f7ff;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 24px;
+}
+  
+tr {
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #cfcfcf;
+  color:#44485a;
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#ffffff;
+  border-top: 1px solid #22262e;
+}
+ 
+td {
+  background:#fcf3fc;
+  padding:20px;
+  text-align: left;
+  font-size: 21px;
+  font-weight: 300;
+  border-right: 1px solid #c1c3d1;
+  max-height: 118px;
+  max-width: 626px;
+}
+
+td > p {
+  font-size: 16px;
 }

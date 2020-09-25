@@ -10,7 +10,10 @@
   <body>
     <header>
       <nav id="main-nav" class="bg-header-footer fixed-header flex space-btwn sticky">
-        <a href="index.html"><img src="img/icons/logo.png" alt="SushiMe Home Page" id="logo" /></a>
+        <div class="flex flex-middle">
+          <a href="index.html"><img src="img/icons/logo.png" alt="SushiMe Home Page" id="logo" /></a>
+          <h1 style="font-size: 28px; color: white;"> | SushiMe</h1>
+        </div>
         <ul class="flex flex-middle">
           <li class="flex flex-middle"><a href="index.html">Home</a></li>
           <li class="flex flex-middle"><a href="gallery.html">Gallery</a></li>
@@ -21,7 +24,72 @@
     </header>
     <section id='favorites-page-1' class="page-container">
       <div class="favorites-content flex flex-middle">
-        <div class="container grid-style">
+        <div class="favorites-container flex flex-middle">
+          <div class="box favorites-header">If you're curious, here are my Top 5 favorite sushi spots!</div>
+          <div id="fave-side-image" class="box favorites-sidebar"></div>
+          <div class="favorites-table">
+            <table class="table-property">
+              <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Restaurant</th>
+                <th>Link</th>
+              </tr>
+              </thead>
+              <tbody class="table-hover">
+              <tr>
+                <td class="flex-middle">1st</td>
+                <td>
+                  <h1>Oishii Sushi</h1>
+                  <p>My personal favorite All-You-Can-Eat and overall spot because the variety of sushi and other Japanese food is amazing despite the casual environment.</p>
+                </td>
+                <td class="flex flex-middle">
+                  <a class="btn page-btn" href="https://www.tripadvisor.ca/Restaurant_Review-g154913-d9812262-Reviews-Oishii_Sushi-Calgary_Alberta.html?m=19905" target="_blank">Website</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="flex-middle">2nd</td>
+                <td>
+                  <h1>Sushi Ginza</h1>
+                  <p>Atmosphere was terrific, especially the Waterfall Garden. The floating Sushi Bar provides a fresh and authentic experience.</p>
+                </td>
+                <td class="flex flex-middle">
+                  <a class="btn page-btn" href="https://www.tripadvisor.ca/Restaurant_Review-g154913-d970749-Reviews-Sushi_Ginza-Calgary_Alberta.html?m=19905" target="_blank">Website</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="flex-middle">3rd</td>
+                <td>
+                  <h1>Sushi Bar Zipang</h1>
+                  <p>Sushi quality is excellent with big portions considering price. I recommend this place if you're aiming for Quality over Quantity.</p>
+                </td>
+                <td class="flex flex-middle">
+                  <a class="btn page-btn" href="https://www.tripadvisor.ca/Restaurant_Review-g154913-d953427-Reviews-Sushi_Bar_Zipang-Calgary_Alberta.html?m=19905" target="_blank">Website</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="flex-middle">4th</td>
+                <td>
+                  <h1>Momo Sushi</h1>
+                  <p>Amazing sushi located in central Vancouver. Service is friendly and the taste of the sushi is reflective of traditional Japanese Sushi. </p>
+                </td>
+                <td class="flex flex-middle">
+                  <a class="btn page-btn" href="https://www.tripadvisor.ca/Restaurant_Review-g154943-d4882500-Reviews-Momo_Sushi-Vancouver_British_Columbia.html?m=19905" target="_blank">Website</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="flex-middle">5th</td>
+                <td>
+                  <h1>Kinjo</h1>
+                  <p>Quick and friendly service with a great variety of delicious items on their menu including fresh sashimi and cheap ramen!</p>
+                </td>
+                <td class="flex flex-middle">
+                  <a class="btn page-btn" href="https://www.tripadvisor.ca/Restaurant_Review-g154913-d9728650-Reviews-Kinjo-Calgary_Alberta.html?m=19905" target="_blank">Website</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
