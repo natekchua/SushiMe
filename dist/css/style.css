@@ -72,11 +72,12 @@ section::before {
 .btn {
   display: inline-block;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   color: #ff00d4;
   border: #ff00d4 2px solid;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   transition: 0.3s linear;
 }
 
@@ -501,6 +502,7 @@ td > p {
   position: relative;
   overflow: hidden;
   background: #ffffff;
+  opacity: 0.9;
 }
 
 .blog-header {
@@ -514,9 +516,9 @@ td > p {
 }
 
 .blog-grid {
-  position: absolute;
+  position: relative;
   display: grid;
-  top: 10%;
+  top: 6%;
   grid-row-gap: 15px;
   grid-column-gap: 15px;
   padding: 50px;
@@ -538,7 +540,7 @@ td > p {
   border-radius: 50px 0 0 50px;
 }
 
-.blog-sidebar-1 p {
+.blog-grid p {
   padding: 10px;
   font-size: 14px;
   color: #1f232b;
@@ -548,7 +550,6 @@ td > p {
   grid-area: blog-sidebar-2;
   background: #5ec8fa9d;
   border-radius: 0 50px 50px 0;
-
 }
 
 .blog-content-1 {
@@ -579,4 +580,26 @@ td > p {
 #blog-page-2 {
   background: url("../img/backgrounds/bg3.jpg") center right/cover;
   height: 100vh;
+}
+
+.blog-grid ul {
+  list-style-type: none;
+}
+
+.blog-grid ul a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.blog-grid ul li {
+  padding: 1rem 1rem;
+  transition: 0.3s linear;
+}
+
+.blog-grid ul li:hover {
+  color: #ff00d4;
+}
+
+.blog-grid ul a:visited, a:hover, a:active {
+  color: inherit;
 }
